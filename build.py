@@ -32,7 +32,7 @@ I={
 "133":["Compile June/July 2026 US industry-event list","PR","EVENTS","Build a date-verified US industry-event list for Jun/Jul 2026.","Feed trade-show targeting and team event registration.","none","Done","Jun 6",None,None,None,0],
 "134":["Build exhibitor scraper (Map Your Show + A2Z adapters)","PR","EXH","Automate scraping exhibitor directories (Map Your Show + A2Z/SEMICON).","Turn show exhibitor lists into a prospect pool at scale.","none","Done","Jun 6",None,None,None,0],
 "135":["Scrape exhibitor directories → 2,739 companies","PR","EXH","Populate the sheet with 2,739 scraped exhibitor companies.","Raw company pool for Apollo enrichment into contactable buyers.","none","Done","Jun 6",None,None,None,0],
-"136":["Phase 2 — Apollo enrichment → decision-maker emails","PR","EXH","Filter exhibitors to ICP buyers and enrich to verified emails via Apollo.","Build the Prospects tab of procurement/engineering contacts.","high","Todo",None,"build Prospects tab","Apollo API key",None,0],
+"136":["Phase 2 — Apollo enrichment → decision-maker emails","PR","EXH","Filter exhibitors to ICP buyers; pull buyer/engineering contacts via Apollo People Search UI (no API key needed).","Build the Prospects tab — saved search + CSV export per show; recipe on the Plane task.","high","Todo",None,"build Prospects tab",None,None,0],
 "137":["Crack SEMICON pagination + add H2 flagship shows","PR","EXH","Fix SEMICON pagination and add flagship shows (FABTECH, IMTS, NADCA, AUSA).","Maximize scraped exhibitor coverage across major H2 shows.","medium","Todo",None,"extend scraper",None,None,0],
 "138":["Enroll team in priority June/July 2026 events","PR","EVENTS","Register the team for high-fit in-window June/July events.","Get Redstone onto show floors before imminent dates pass.","high","Todo",None,None,None,None,0],
 "139":["Verify MD&M East 2026 dates with Informa","PR","EVENTS","Confirm the true 2026 MD&M East dates with Informa.","Avoid booking travel against a possibly-wrong 3rd-party date.","medium","Todo",None,None,None,"2026 dates w/ Informa",0],
@@ -271,7 +271,7 @@ HTML=f'''<!DOCTYPE html>
 
 <div class="note" style="border-left-color:#e5484d">
   <h3>Blocked / needs verification</h3>
-  <p><b>⛔ Blocked</b> — can't progress until the dependency clears: <b>RED-136</b> (Apollo API key in <code>.env.local</code>), <b>RED-132</b> (Leo's 3 photo decisions), <b>RED-101</b> (Eric's brochure feedback, RED-109), <b>RED-102</b> (next trade-show attendee list, RED-113), <b>RED-152</b> (website launch + brochure approval), <b>RED-106</b> (triggers when sitemap goes to Eric).</p>
+  <p><b>⛔ Blocked</b> — can't progress until the dependency clears: <b>RED-132</b> (Leo's 3 photo decisions), <b>RED-101</b> (Eric's brochure feedback, RED-109), <b>RED-102</b> (next trade-show attendee list, RED-113), <b>RED-152</b> (website launch + brochure approval), <b>RED-106</b> (triggers when sitemap goes to Eric). <i>RED-136 unblocked 2026-07-20 — Apollo UI search, no API key.</i></p>
   <p><b>⚠ Verify</b> — confirm before acting/publishing: <b>RED-139</b> (MD&amp;M East 2026 dates — Informa's site shows May 2027, contradicting 3rd-party Jun 2026).</p>
 </div>
 
