@@ -47,14 +47,14 @@ I={
 "168":["Send Eric the qualified-leads list (CPL dispute)","PR","LEADS","Pull the qualified-lead list backing our CPL figure.","Resolve Eric's cost-per-lead dispute with verifiable data.","urgent","Todo",None,None,None,None,0],
 "147":["Email Eric: consolidated outreach lists + brochures","PR","TRACKER","Send Eric ONE consolidated email with all lists, brochures, and a checklist.","Stop losing action items in Slack; get his recorded review back.","high","Todo",None,None,None,None,0],
 "113":["Eric/Alec: share next trade show details","PR","EVENTS","Get the next show's name, exhibitor and (key) attendee lists from Eric/Alec.","Powers the customized-brochure workflow + trade-show outbound.","high","Backlog",None,None,None,None,0],
-"106":["Start Attio build (after website sent for approval)","CRM",None,"Build the Attio CRM to auto-reply, qualify, enrich, and nurture leads.","Replace manual HubSpot sequencing once the sitemap is sent.","high","Backlog",None,None,"trigger: sitemap → Eric",None,0],
-"107":["Build qualification agent (rev/employee + headcount)","CRM",None,"Auto-qualify inbound leads on headcount/revenue/order signals.","Filter leads before they reach Alec's queue.","high","Backlog",None,None,None,None,0],
-"108":["Attio AI agent finish (Redstone Attio install)","CRM",None,"Finish the Redstone Attio AI agent install.","Same CRM automation goal (pairs with R7/RED-120).","high","Backlog",None,None,None,None,0],
+"106":["Start Attio build (after website sent for approval)","CRM",None,"Build the Attio CRM to auto-reply, qualify, enrich, and nurture leads.","Replace manual HubSpot sequencing once the sitemap is sent.","low","Backlog",None,None,"trigger: sitemap → Eric",None,0],
+"107":["Build qualification agent (rev/employee + headcount)","CRM",None,"Auto-qualify inbound leads on headcount/revenue/order signals.","Filter leads before they reach Alec's queue.","low","Backlog",None,None,None,None,0],
+"108":["Attio AI agent finish (Redstone Attio install)","CRM",None,"Finish the Redstone Attio AI agent install.","Consolidated under the Attio group (RED-106); RED-120 dup cancelled.","low","Backlog",None,None,None,None,0],
 "120":["R7 — Attio AI agent finish","CRM",None,"Complete the Attio agent for Redstone's CRM (S1 sprint item).","Duplicate of RED-108 — consolidated into the Attio group (RED-106).","medium","Cancelled",None,None,None,None,0],
 "119":["Xometry Lead Funnel","CRM","LEADS","Handle paid quotes and the instant-quote email flow.","Convert quote requests into tracked leads.","none","Done","Jun 23",None,None,None,0],
 "127":["Add missing leads to HubSpot + forward to Eric/sales@","CRM","LEADS","Add missing leads to HubSpot and forward submissions to Eric/sales@.","Keep the CRM and Eric in sync on inbound.","high","Done","Jun 3",None,None,None,0],
 "111":["Alec: log all outbound calls in HubSpot","CRM",None,"Ensure Alec logs all outbound calls in HubSpot, not his cell.","Unlocks the transcript pipeline for copy + enrichment.","high","Backlog",None,None,None,None,0],
-"144":["Match HubSpot call list to leads","CRM","LEADS","Cross-check HubSpot calls vs leads for timely, qualified follow-up.","Feeds Alec's workflow / can auto-update the leads sheet.","medium","Todo",None,None,None,None,0],
+"144":["Match HubSpot call list to leads","CRM","LEADS","Cross-check HubSpot calls vs leads for timely, qualified follow-up.","Feeds Alec's workflow / can auto-update the leads sheet.","medium","Blocked",None,None,"no transcript API access",None,0],
 "145":["Research HubSpot call-transcript extraction","CRM",None,"Timeboxed research for a cleaner way to pull HubSpot call transcripts.","Read call-quality themes for copy and Attio enrichment.","low","Todo",None,None,None,None,0],
 "151":["Alec: send HubSpot call transcripts (Mexico-vs-China)","CRM",None,"Get 2–3 Alec calls showing the Mexico-vs-China cost explanation.","Source material for the Mexico brochure's cost-reality messaging.","medium","Todo",None,None,None,None,0],
 "89":["Investigate scraping HubSpot call recordings","CRM",None,"Investigate scraping historical HubSpot call recordings/transcripts.","Context for landing-page copy and Attio account enrichment.","medium","Backlog",None,None,None,None,0],
@@ -124,6 +124,15 @@ I={
 "131":["Redstone copy review","OP","CLAIMS","Review Redstone copy for accuracy and claims.","Ensure on-brand, compliant messaging (see Content Claims Review).","medium","Backlog",None,None,None,None,1],
 }
 
+# consolidation groups: id -> (short label, "hub" | "m")
+GRP={
+"106":("Attio","hub"),"107":("Attio","m"),"108":("Attio","m"),
+"144":("Call data","hub"),"111":("Call data","m"),"89":("Call data","m"),"145":("Call data","m"),"151":("Call data","m"),
+"91":("CPL reporting","hub"),"92":("CPL reporting","m"),"93":("CPL reporting","m"),"90":("CPL reporting","m"),
+"57":("Sales deck","hub"),"58":("Sales deck","m"),"59":("Sales deck","m"),"61":("Sales deck","m"),"56":("Sales deck","m"),
+"143":("Prospecting","hub"),"136":("Prospecting","m"),"137":("Prospecting","m"),"138":("Prospecting","m"),"139":("Prospecting","m"),"140":("Prospecting","m"),"141":("Prospecting","m"),"142":("Prospecting","m"),"129":("Prospecting","m"),
+"163":("Brochures","hub"),"164":("Brochures","m"),"165":("Brochures","m"),"166":("Brochures","m"),"167":("Brochures","m"),"169":("Brochures","m"),"170":("Brochures","m"),"132":("Brochures","m"),"149":("Brochures","m"),"150":("Brochures","m"),"152":("Brochures","m"),"101":("Brochures","m"),"102":("Brochures","m"),"109":("Brochures","m"),"115":("Brochures","m"),
+}
 def esc(t): return t.replace("&","&amp;")
 PRANK={"urgent":0,"high":1,"medium":2,"low":3,"none":4}
 PLBL={"urgent":"Urgent","high":"High","medium":"Medium","low":"Low","none":"No priority"}
@@ -132,6 +141,9 @@ def row(i,d,show_date=False):
     name,cat,rk,pu,uc,prio,state,date,build,blocked,verify,flag=d
     chips=[]
     chips.append(f'<span class="cat">{esc(CATN[cat])}</span>')
+    if i in GRP:
+        gl,gk=GRP[i]
+        chips.append(f'<span class="grp hub">◆ {gl} hub</span>' if gk=="hub" else f'<span class="grp">↳ {gl}</span>')
     if rk:
         lbl,url,pdf=R[rk]
         cls="res pdf" if pdf else "res"
@@ -156,7 +168,7 @@ EXCLUDE={"27","37","78","81","99","100","105","110","122","153"}
 HIDE=[i for i in I if I[i][5]=="urgent"]   # urgent items removed from report per request
 XI=[i for i in I if i in EXCLUDE and I[i][5]!="urgent"]  # non-Redstone items removed (not already urgent)
 A=[i for i in I if I[i][5]!="urgent" and i not in EXCLUDE]
-notstarted=[i for i in A if I[i][6] in ("Backlog","Todo")]
+notstarted=[i for i in A if I[i][6] in ("Backlog","Todo","Blocked")]
 inprog=[i for i in A if I[i][6]=="In Progress"]
 approval=[i for i in A if I[i][6]=="Internal Approval"]
 done=[i for i in A if I[i][6]=="Done"]
@@ -221,6 +233,8 @@ HTML=f'''<!DOCTYPE html>
   .p-medium{{color:#9cb4ff;background:rgba(62,99,221,.14);border:1px solid rgba(62,99,221,.34)}}
   .p-low{{color:#b8c0cf;background:rgba(107,114,128,.16);border:1px solid rgba(107,114,128,.3)}}
   .p-none{{color:#8b93a1;background:rgba(82,88,99,.12);border:1px solid rgba(82,88,99,.28)}}
+  .grp{{font-size:10.5px;color:#c9b6f0;background:rgba(142,78,198,.13);border:1px solid rgba(142,78,198,.32);border-radius:6px;padding:2px 7px;white-space:nowrap}}
+  .grp.hub{{color:#e6d8ff;font-weight:700;background:rgba(142,78,198,.22);border-color:rgba(142,78,198,.52)}}
   .note{{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin-top:28px}}
   .note h3{{margin:0 0 8px;font-size:14px}} .note p{{margin:6px 0;color:var(--muted);font-size:13.5px}}
   .files{{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-top:12px}}
@@ -270,9 +284,16 @@ HTML=f'''<!DOCTYPE html>
 {block(canc)}
 </ul>
 
+<div class="note" style="border-left-color:#3e63dd">
+  <h3>CPL reporting dashboard — RED-91 group</h3>
+  <p>A GitHub dashboard has been built for the CPL reporting &amp; dashboard group (RED-91 / 92 / 93 / 90). <b>The report covers:</b></p>
+  <p>Leads by channel (Google Ads · cold email · organic · referral), volume first &nbsp;•&nbsp; Cost per lead (CPL) overall + by source &nbsp;•&nbsp; MQL count &amp; cost per MQL (target ~$500) &nbsp;•&nbsp; SQL count &amp; cost per SQL (target ~$1k) &nbsp;•&nbsp; CPA / cost per closed customer (target ~$4k) &nbsp;•&nbsp; Ad spend + management fees &nbsp;•&nbsp; Quotes, form-fills &amp; sales calls tied together (via Attio) &nbsp;•&nbsp; Funnel conversion rates (lead→MQL→SQL→close; 2:1 MQL:SQL, 25% close) &nbsp;•&nbsp; Monthly + weekly check-in cadence with off-target flags vs targets.</p>
+  <p><b>Dashboard:</b> <i>link pending confirmation</i></p>
+</div>
+
 <div class="note" style="border-left-color:#e5484d">
   <h3>Blocked / needs verification</h3>
-  <p><b>⛔ Blocked</b> — can't progress until the dependency clears: <b>RED-132</b> (Leo's 3 photo decisions), <b>RED-101</b> (Eric's brochure feedback, RED-109), <b>RED-102</b> (next trade-show attendee list, RED-113), <b>RED-152</b> (website launch + brochure approval), <b>RED-106</b> (triggers when sitemap goes to Eric). <i>RED-136 unblocked 2026-07-20 — Apollo UI search, no API key.</i></p>
+  <p><b>⛔ Blocked</b> — can't progress until the dependency clears: <b>RED-132</b> (Leo's 3 photo decisions), <b>RED-101</b> (Eric's brochure feedback, RED-109), <b>RED-102</b> (next trade-show attendee list, RED-113), <b>RED-152</b> (website launch + brochure approval), <b>RED-106</b> (triggers when sitemap goes to Eric), <b>RED-144</b> (no API access to HubSpot call transcripts — needs a new tool). <i>RED-136 unblocked 2026-07-20 — Apollo UI search, no API key.</i></p>
   <p><b>⚠ Verify</b> — confirm before acting/publishing: <b>RED-139</b> (MD&amp;M East 2026 dates — Informa's site shows May 2027, contradicting 3rd-party Jun 2026).</p>
 </div>
 
