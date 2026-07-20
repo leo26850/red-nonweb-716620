@@ -42,7 +42,7 @@ I={
 "143":["Build June–July US trade-show list (exhibitors)","PR","EVENTS","Pick the single biggest US show per vertical in Jun/Jul.","Source exhibitor lists for metal-parts buyer outreach.","high","Todo",None,"curate",None,None,0],
 "124":["Create cold call list for Eric","PR","COLDCALL","Build a 50–75 contact new-space/defense cold-call sheet.","Eric dials procurement/supply-chain buyers himself.","none","Done","Jul 20",None,None,None,0],
 "129":["Lab List at tech companies","PR",None,"Source lab-operations buyers for the Coupa/Amazon RF-enclosure storefront.","Reach people who need 1–10 stocked enclosures fast.","none","Backlog",None,"list to build",None,None,0],
-"161":["Redstone USA — Target Account Tracker","PR","TRACKER","Enrich the target list with phones + correct engineering/supply-chain contacts.","Cold-calling to win business for the Seattle facility.","high","In Progress",None,None,None,None,0],
+"161":["Redstone USA — Target Account Tracker","PR","TRACKER","Enrich the target list with phones + correct engineering/supply-chain contacts.","Cold-calling to win business for the Seattle facility.","high","Done","Jul 20",None,None,None,0],
 "168":["Send Eric the qualified-leads list (CPL dispute)","PR","LEADS","Pull the qualified-lead list backing our CPL figure.","Resolve Eric's cost-per-lead dispute with verifiable data.","urgent","Todo",None,None,None,None,0],
 "147":["Email Eric: consolidated outreach lists + brochures","PR","TRACKER","Send Eric ONE consolidated email with all lists, brochures, and a checklist.","Stop losing action items in Slack; get his recorded review back.","high","Todo",None,None,None,None,0],
 "113":["Eric/Alec: share next trade show details","PR","EVENTS","Get the next show's name, exhibitor and (key) attendee lists from Eric/Alec.","Powers the customized-brochure workflow + trade-show outbound.","high","Backlog",None,None,None,None,0],
@@ -149,8 +149,12 @@ def row(i,d,show_date=False):
 
 def sortkey(i): return (PRANK[I[i][5]], -int(i))
 
+# agency-internal / meta work — not the Redstone business itself (onboarding SOP, internal
+# tooling guides, context-gathering prompts, internal meetings, separate Aerospace entity)
+EXCLUDE={"27","37","78","81","99","100","105","110","122","153"}
 HIDE=[i for i in I if I[i][5]=="urgent"]   # urgent items removed from report per request
-A=[i for i in I if I[i][5]!="urgent"]
+XI=[i for i in I if i in EXCLUDE and I[i][5]!="urgent"]  # non-Redstone items removed (not already urgent)
+A=[i for i in I if I[i][5]!="urgent" and i not in EXCLUDE]
 notstarted=[i for i in A if I[i][6] in ("Backlog","Todo")]
 inprog=[i for i in A if I[i][6]=="In Progress"]
 approval=[i for i in A if I[i][6]=="Internal Approval"]
@@ -230,8 +234,8 @@ HTML=f'''<!DOCTYPE html>
 <header>
   <div class="kicker">Redstone Manufacturing · Plane project RED</div>
   <h1>Redstone Work</h1>
-  <p class="sub">The non-website RED work — outbound, CRM, brochures &amp; decks, reporting, email infra, ads, coordination — organised by status and priority so the not-started queue is front and centre. Each item carries its purpose, use case, GDrive link, and any blocked/verify/to-build flags.</p>
-  <div class="meta">Source: Plane <code>project-ares</code> · Drive: Redstone GDrive · priority + state pulled 2026-07-20 · <b>{len(HIDE)} urgent-priority items hidden per request</b></div>
+  <p class="sub">Redstone-business work from project RED — outbound, CRM, brochures &amp; decks, reporting, email infra, ads — organised by status and priority so the not-started queue is front and centre. Each item carries its purpose, use case, GDrive link, and any blocked/verify/to-build flags. Website build and agency-internal work are excluded.</p>
+  <div class="meta">Source: Plane <code>project-ares</code> · Drive: Redstone GDrive · state reconciled 2026-07-20 · <b>{len(HIDE)} urgent + {len(XI)} agency-internal items hidden per request</b></div>
   <div class="stats">
     <div class="stat"><b>{len(notstarted)}</b><span>not started</span></div>
     <div class="stat"><b>{len(inprog)}</b><span>in progress</span></div>
