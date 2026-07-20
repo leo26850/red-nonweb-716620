@@ -163,6 +163,9 @@ def row(i,d,show_date=False):
 
 def sortkey(i): return (PRANK[I[i][5]], -int(i))
 
+# linked (has a sheet/dashboard/PDF) + not-started -> In Progress
+INPROG_LINKED=["103","136","137","138","139","140","142","143","147","113","90","91","92","93","132","149","69","131"]
+for _i in INPROG_LINKED: I[_i][6]="In Progress"
 # agency-internal / meta work — not the Redstone business itself (onboarding SOP, internal
 # tooling guides, context-gathering prompts, internal meetings, separate Aerospace entity)
 EXCLUDE={"27","37","78","81","99","100","105","110","122","153"}
