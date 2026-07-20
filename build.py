@@ -149,11 +149,13 @@ def row(i,d,show_date=False):
 
 def sortkey(i): return (PRANK[I[i][5]], -int(i))
 
-notstarted=[i for i in I if I[i][6] in ("Backlog","Todo")]
-inprog=[i for i in I if I[i][6]=="In Progress"]
-approval=[i for i in I if I[i][6]=="Internal Approval"]
-done=[i for i in I if I[i][6]=="Done"]
-canc=[i for i in I if I[i][6]=="Cancelled"]
+HIDE=[i for i in I if I[i][5]=="urgent"]   # urgent items removed from report per request
+A=[i for i in I if I[i][5]!="urgent"]
+notstarted=[i for i in A if I[i][6] in ("Backlog","Todo")]
+inprog=[i for i in A if I[i][6]=="In Progress"]
+approval=[i for i in A if I[i][6]=="Internal Approval"]
+done=[i for i in A if I[i][6]=="Done"]
+canc=[i for i in A if I[i][6]=="Cancelled"]
 
 def block(ids,show_date=False):
     return "\n".join(row(i,I[i],show_date) for i in sorted(ids,key=sortkey))
@@ -229,7 +231,7 @@ HTML=f'''<!DOCTYPE html>
   <div class="kicker">Redstone Manufacturing · Plane project RED</div>
   <h1>Redstone Work</h1>
   <p class="sub">The non-website RED work — outbound, CRM, brochures &amp; decks, reporting, email infra, ads, coordination — organised by status and priority so the not-started queue is front and centre. Each item carries its purpose, use case, GDrive link, and any blocked/verify/to-build flags.</p>
-  <div class="meta">Source: Plane <code>project-ares</code> · Drive: Redstone GDrive · priority + state pulled 2026-07-20</div>
+  <div class="meta">Source: Plane <code>project-ares</code> · Drive: Redstone GDrive · priority + state pulled 2026-07-20 · <b>{len(HIDE)} urgent-priority items hidden per request</b></div>
   <div class="stats">
     <div class="stat"><b>{len(notstarted)}</b><span>not started</span></div>
     <div class="stat"><b>{len(inprog)}</b><span>in progress</span></div>
@@ -266,7 +268,7 @@ HTML=f'''<!DOCTYPE html>
 <div class="note" style="border-left-color:#e5484d">
   <h3>Blocked / needs verification</h3>
   <p><b>⛔ Blocked</b> — can't progress until the dependency clears: <b>RED-136</b> (Apollo API key in <code>.env.local</code>), <b>RED-132</b> (Leo's 3 photo decisions), <b>RED-101</b> (Eric's brochure feedback, RED-109), <b>RED-102</b> (next trade-show attendee list, RED-113), <b>RED-152</b> (website launch + brochure approval), <b>RED-106</b> (triggers when sitemap goes to Eric).</p>
-  <p><b>⚠ Verify</b> — confirm before acting/publishing: <b>RED-63</b> (sand-casting max weight 300kg — confirm exact bound with Eric), <b>RED-139</b> (MD&amp;M East 2026 dates — Informa's site shows May 2027, contradicting 3rd-party Jun 2026).</p>
+  <p><b>⚠ Verify</b> — confirm before acting/publishing: <b>RED-139</b> (MD&amp;M East 2026 dates — Informa's site shows May 2027, contradicting 3rd-party Jun 2026).</p>
 </div>
 
 <div class="note" style="border-left-color:#f59e0b">
