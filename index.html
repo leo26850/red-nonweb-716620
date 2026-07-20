@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Redstone — Non-Website Work Items</title>
+<title>Redstone Work</title>
 <style>
   :root{
     --bg:#0f1115; --card:#171a21; --card2:#1c2029; --ink:#e7ebf2; --muted:#9aa4b6;
@@ -46,6 +46,7 @@
   .res.pdf:hover{background:rgba(229,72,77,.22)}
   .build{font-size:11px;font-weight:600;color:#ffd27a;background:rgba(245,158,11,.13);
     border:1px solid rgba(245,158,11,.34);border-radius:7px;padding:3px 9px;white-space:nowrap}
+  .date{font-size:11.5px;color:#8fe6a8;white-space:nowrap;font-variant-numeric:tabular-nums;opacity:.9}
   .badge{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
   .b-Done{color:#8fe6a8;background:rgba(70,167,88,.13);border-color:rgba(70,167,88,.3)}
   .b-InProgress{color:#ffd27a;background:rgba(245,158,11,.13);border-color:rgba(245,158,11,.3)}
@@ -69,7 +70,7 @@
 <div class="wrap">
 <header>
   <div class="kicker">Redstone Manufacturing · Plane project RED</div>
-  <h1>Non-Website Work Items</h1>
+  <h1>Redstone Work</h1>
   <p class="sub">Everything in the RED project that isn't the website build — outbound, CRM, brochures &amp; decks, reporting, email infrastructure, ads, and coordination. Each item is linked to its relevant Google Drive sheet or file where one exists; items that require a list we still need to build are tagged.</p>
   <div class="meta">Source: Plane workspace <code>project-ares</code> · Drive: Redstone GDrive · Generated 2026-07-20</div>
   <div class="stats">
@@ -89,9 +90,9 @@
   <h2>Cold email / outbound <span class="n">5</span></h2>
   <p class="desc">Cold-email launch, tooling, and outbound domain strategy.</p>
   <ul>
-    <li><span class="id">RED-82</span><span class="name">Go Live with Cold Email</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-130</span><span class="name">Share Lemlist API key (cold-email stats pipeline)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-68</span><span class="name">Lemlist reply webhook → BigQuery + Slack pipeline</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-82</span><span class="name">Go Live with Cold Email</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="date">✓ May 22</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-130</span><span class="name">Share Lemlist API key (cold-email stats pipeline)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="date">✓ Jun 3</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-68</span><span class="name">Lemlist reply webhook → BigQuery + Slack pipeline</span><span class="right"><span class="date">✓ May 22</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-103</span><span class="name">Keep ≥1 outbound domain warming in reserve</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-104</span><span class="name">"Mexico→China switch on discovery" outbound sequence</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
   </ul>
@@ -101,9 +102,9 @@
   <h2>Prospecting — lists, scrapers, trade shows <span class="n">17</span></h2>
   <p class="desc">Lead-list building, exhibitor scraping, event enrollment, target trackers.</p>
   <ul>
-    <li><span class="id">RED-133</span><span class="name">Compile June/July 2026 US industry-event list</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/13WJgCUhWEss1SxEC09rHA-5nkePfUm_N-NyNnlZoNKE/edit" target="_blank">📄 Event Lists-100</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-134</span><span class="name">Build exhibitor scraper (Map Your Show + A2Z adapters)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Automate 2026 Exhibitors</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-135</span><span class="name">Scrape exhibitor directories → 2,739 companies</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Automate 2026 Exhibitors</a><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-133</span><span class="name">Compile June/July 2026 US industry-event list</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/13WJgCUhWEss1SxEC09rHA-5nkePfUm_N-NyNnlZoNKE/edit" target="_blank">📄 Event Lists-100</a><span class="date">✓ Jun 6</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-134</span><span class="name">Build exhibitor scraper (Map Your Show + A2Z adapters)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Automate 2026 Exhibitors</a><span class="date">✓ Jun 6</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-135</span><span class="name">Scrape exhibitor directories → 2,739 companies</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Automate 2026 Exhibitors</a><span class="date">✓ Jun 6</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-136</span><span class="name">Phase 2 — Apollo enrichment → decision-maker emails</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Exhibitors</a><span class="build">⚠ build Prospects tab</span><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-137</span><span class="name">Crack SEMICON pagination + add H2 flagship shows</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1StAcVxmXoQT2fc1V5iF7KPsT53FN1i_HuHEnIHeWaf8/edit" target="_blank">📄 Exhibitors</a><span class="build">⚠ extend scraper</span><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-138</span><span class="name">Enroll team in priority June/July 2026 events</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/13WJgCUhWEss1SxEC09rHA-5nkePfUm_N-NyNnlZoNKE/edit" target="_blank">📄 Event Lists-100</a><span class="badge b-Todo">Todo</span></span></li>
@@ -112,7 +113,7 @@
     <li><span class="id">RED-141</span><span class="name">Expand Aerospace &amp; Defense Apollo list to ~80</span><span class="right"><span class="build">⚠ expand list</span><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-142</span><span class="name">Refine Ohio OEM list (machinery/equipment only)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1m29O2WGQ5C0nEJs9PRDpbUBBHMlNhnfKOPEQrrRTzYs/edit" target="_blank">📄 Ohio OEM</a><span class="build">⚠ refine</span><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-143</span><span class="name">Build June–July US trade-show list (exhibitors)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/13WJgCUhWEss1SxEC09rHA-5nkePfUm_N-NyNnlZoNKE/edit" target="_blank">📄 Event Lists-100</a><span class="build">⚠ curate</span><span class="badge b-Todo">Todo</span></span></li>
-    <li><span class="id">RED-124</span><span class="name">Create cold call list for Eric</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/10cPya6DePu29YDn3CQZFbGm-tP28gYswxlarzG8izjE/edit" target="_blank">📄 Eric Cold Call List</a><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-124</span><span class="name">Create cold call list for Eric</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/10cPya6DePu29YDn3CQZFbGm-tP28gYswxlarzG8izjE/edit" target="_blank">📄 Eric Cold Call List</a><span class="date">✓ Jul 20</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-129</span><span class="name">Lab List at tech companies</span><span class="right"><span class="build">⚠ list to build</span><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-161</span><span class="name">Redstone USA — Target Account Tracker</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1t0IqQSnME-dQTK0jsAws4JHeE4kwajG_HnwocrAgrwg/edit" target="_blank">📄 Target Tracker (Enriched)</a><span class="badge b-InProgress">In Progress</span></span></li>
     <li><span class="id">RED-168</span><span class="name">Send Eric the qualified-leads list (CPL dispute)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Todo">Todo</span></span></li>
@@ -129,14 +130,14 @@
     <li><span class="id">RED-107</span><span class="name">Build qualification agent (rev/employee + headcount)</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-108</span><span class="name">Attio AI agent finish (Redstone Attio install)</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-120</span><span class="name">R7 — Attio AI agent finish</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
-    <li><span class="id">RED-119</span><span class="name">Xometry Lead Funnel</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-127</span><span class="name">Add missing leads to HubSpot + forward to Eric/sales@</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-119</span><span class="name">Xometry Lead Funnel</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ Jun 23</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-127</span><span class="name">Add missing leads to HubSpot + forward to Eric/sales@</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ Jun 3</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-111</span><span class="name">Alec: log all outbound calls in HubSpot</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-144</span><span class="name">Match HubSpot call list to leads</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-145</span><span class="name">Research HubSpot call-transcript extraction</span><span class="right"><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-151</span><span class="name">Alec: send HubSpot call transcripts (Mexico-vs-China)</span><span class="right"><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-89</span><span class="name">Investigate scraping HubSpot call recordings</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
-    <li><span class="id">RED-128</span><span class="name">Connect homepage form → Slack lead notification<span class="flag">flag</span></span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-128</span><span class="name">Connect homepage form → Slack lead notification<span class="flag">flag</span></span><span class="right"><span class="date">✓ Jun 10</span><span class="badge b-Done">Done</span></span></li>
   </ul>
 </section>
 
@@ -144,11 +145,11 @@
   <h2>Reporting / dashboards / lead-sheet ops <span class="n">15</span></h2>
   <p class="desc">CPL reporting, dashboards, lead-sheet definitions and backfills, data pipelines.</p>
   <ul>
-    <li><span class="id">RED-74</span><span class="name">BQ leads → Google Sheet daily mirror</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-86</span><span class="name">Define MQL vs SQL in writing + propagate</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-87</span><span class="name">Hard-block free-email providers from lead sheet</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-88</span><span class="name">Add MQL/SQL + cadence + comments columns to lead sheet</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-112</span><span class="name">Alec: backfill inbound lead sheet (2 new leads)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-74</span><span class="name">BQ leads → Google Sheet daily mirror</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ May 19</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-86</span><span class="name">Define MQL vs SQL in writing + propagate</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ May 26</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-87</span><span class="name">Hard-block free-email providers from lead sheet</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ May 26</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-88</span><span class="name">Add MQL/SQL + cadence + comments columns to lead sheet</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ May 26</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-112</span><span class="name">Alec: backfill inbound lead sheet (2 new leads)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/11kx_D76BqR7ZdxxX5XFXTNQz3kXg130tU03kbcu975I/edit" target="_blank">📄 HubSpot Leads</a><span class="date">✓ May 26</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-90</span><span class="name">Month-by-month R2B2 company-size report</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1kr_mhcd_vmFq193MwqEUWq26A2nCRuupfvjmG6nUH_g/edit" target="_blank">📄 Sales Report</a><span class="build">⚠ build report</span><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-91</span><span class="name">Build CPL dashboard auto-updating from BigQuery/Attio</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/12Qxsij-zd-i0YRZEUUJrdy4i6_NUQbhJXF-DveN2PTg/edit" target="_blank">📄 Roadmap (Lead Data)</a><span class="build">⚠ build dashboard</span><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-92</span><span class="name">Set CPL targets (MQL ~$500 / SQL ~$1k / CPA ~$4k)</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/12Qxsij-zd-i0YRZEUUJrdy4i6_NUQbhJXF-DveN2PTg/edit" target="_blank">📄 Roadmap</a><span class="badge b-Backlog">Backlog</span></span></li>
@@ -177,7 +178,7 @@
     <li><span class="id">RED-149</span><span class="name">Replace live website brochure PDF with simplified version<span class="flag">flag</span></span><span class="right"><a class="res pdf" href="https://drive.google.com/file/d/1_SipSJHFP8CW3u-m6M0HtrHJQCEOMdv6/view" target="_blank">📕 Redstone brochure v4</a><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-150</span><span class="name">Kas→Eric brochure "homework" email</span><span class="right"><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-109</span><span class="name">Eric: send brochure feedback</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
-    <li><span class="id">RED-115</span><span class="name">Eric: think through how brochure/deck will be used</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-115</span><span class="name">Eric: think through how brochure/deck will be used</span><span class="right"><span class="date">✓ Jun 23</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-101</span><span class="name">Build sales deck after brochure approved</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-102</span><span class="name">Customized-brochure flow for trade-show top 10</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-152</span><span class="name">Automate brochure delivery on lead-form submission</span><span class="right"><span class="badge b-Todo">Todo</span></span></li>
@@ -186,10 +187,10 @@
     <li><span class="id">RED-58</span><span class="name">General Deck — design inconsistency audit</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-59</span><span class="name">General Deck — second copy review pass</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
     <li><span class="id">RED-61</span><span class="name">General Deck — Round 3 revisions from Leo</span><span class="right"><span class="badge b-InProgress">In Progress</span></span></li>
-    <li><span class="id">RED-62</span><span class="name">Eric: deck Quote SLA 14→5 business days</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-62</span><span class="name">Eric: deck Quote SLA 14→5 business days</span><span class="right"><span class="date">✓ May 29</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-63</span><span class="name">Eric: sand casting max weight 7,000kg→300kg</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
-    <li><span class="id">RED-64</span><span class="name">Eric: deck remove Ohio address, use Seattle only</span><span class="right"><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-65</span><span class="name">Eric: deck logo bar — drop Mahindra/Honda/Mayer</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-64</span><span class="name">Eric: deck remove Ohio address, use Seattle only</span><span class="right"><span class="date">✓ May 29</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-65</span><span class="name">Eric: deck logo bar — drop Mahindra/Honda/Mayer</span><span class="right"><span class="date">✓ May 29</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-66</span><span class="name">Eric: deck Post-Processing slide tagline removal</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
   </ul>
 </section>
@@ -198,10 +199,10 @@
   <h2>Email infrastructure / lead automation <span class="n">5</span></h2>
   <p class="desc">SMTP/Mailgun migration for the sales mailbox and lead auto-reply.</p>
   <ul>
-    <li><span class="id">RED-347</span><span class="name">Set up Mailgun SMTP on the Redstone sales email</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-348</span><span class="name">Send SMTP switch details to Leo via Slack</span><span class="right"><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-349</span><span class="name">Re-test notification deliverability after Mailgun</span><span class="right"><span class="badge b-Done">Done</span></span></li>
-    <li><span class="id">RED-350</span><span class="name">Inform Eric of SMTP migration + justification</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-347</span><span class="name">Set up Mailgun SMTP on the Redstone sales email</span><span class="right"><a class="res" href="https://docs.google.com/spreadsheets/d/1FLRGdh2saho5EQYMsyFX877fTRd41VzNzX6IYRYXVyg/edit" target="_blank">📄 Domains &amp; Accounts</a><span class="date">✓ Jul 2</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-348</span><span class="name">Send SMTP switch details to Leo via Slack</span><span class="right"><span class="date">✓ Jul 2</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-349</span><span class="name">Re-test notification deliverability after Mailgun</span><span class="right"><span class="date">✓ Jul 2</span><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-350</span><span class="name">Inform Eric of SMTP migration + justification</span><span class="right"><span class="date">✓ Jul 6</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-429</span><span class="name">Lead-form auto-reply automation (enterprise leads)<span class="flag">flag</span></span><span class="right"><span class="badge b-InternalApproval">Internal Approval</span></span></li>
   </ul>
 </section>
@@ -222,11 +223,11 @@
   <ul>
     <li><span class="id">RED-158</span><span class="name">Kas: book Rachel + full-team meeting (calendar invites)</span><span class="right"><span class="badge b-Todo">Todo</span></span></li>
     <li><span class="id">RED-122</span><span class="name">Jack/Rachel Friday lunch coord + Ash notes send</span><span class="right"><span class="badge b-Backlog">Backlog</span></span></li>
-    <li><span class="id">RED-79</span><span class="name">Eric call prep</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-79</span><span class="name">Eric call prep</span><span class="right"><span class="date">✓ Jun 1</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-76</span><span class="name">Eric call prep (from Jack's emailed docs)</span><span class="right"><span class="badge b-Cancelled">Cancelled</span></span></li>
     <li><span class="id">RED-78</span><span class="name">Eric: recurring Tuesday meeting setup</span><span class="right"><span class="badge b-Cancelled">Cancelled</span></span></li>
     <li><span class="id">RED-81</span><span class="name">Eric recurring Tuesday meeting setup</span><span class="right"><span class="badge b-Cancelled">Cancelled</span></span></li>
-    <li><span class="id">RED-15</span><span class="name">Eric review session Sun May 10 — capture sign-off</span><span class="right"><span class="badge b-Done">Done</span></span></li>
+    <li><span class="id">RED-15</span><span class="name">Eric review session Sun May 10 — capture sign-off</span><span class="right"><span class="date">✓ Jun 6</span><span class="badge b-Done">Done</span></span></li>
     <li><span class="id">RED-27</span><span class="name">Internal review pass — Leo + Daniel sign off</span><span class="right"><span class="badge b-Cancelled">Cancelled</span></span></li>
     <li><span class="id">RED-37</span><span class="name">Mid-phase Eric review session (target May 20)</span><span class="right"><span class="badge b-Cancelled">Cancelled</span></span></li>
   </ul>
