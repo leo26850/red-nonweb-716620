@@ -50,7 +50,7 @@ I={
 "106":["Start Attio build (after website sent for approval)","CRM",None,"Build the Attio CRM to auto-reply, qualify, enrich, and nurture leads.","Replace manual HubSpot sequencing once the sitemap is sent.","high","Backlog",None,None,"trigger: sitemap → Eric",None,0],
 "107":["Build qualification agent (rev/employee + headcount)","CRM",None,"Auto-qualify inbound leads on headcount/revenue/order signals.","Filter leads before they reach Alec's queue.","high","Backlog",None,None,None,None,0],
 "108":["Attio AI agent finish (Redstone Attio install)","CRM",None,"Finish the Redstone Attio AI agent install.","Same CRM automation goal (pairs with R7/RED-120).","high","Backlog",None,None,None,None,0],
-"120":["R7 — Attio AI agent finish","CRM",None,"Complete the Attio agent for Redstone's CRM (S1 sprint item).","Distinct from CPG's Attio; owned under RED.","medium","Backlog",None,None,None,None,0],
+"120":["R7 — Attio AI agent finish","CRM",None,"Complete the Attio agent for Redstone's CRM (S1 sprint item).","Duplicate of RED-108 — consolidated into the Attio group (RED-106).","medium","Cancelled",None,None,None,None,0],
 "119":["Xometry Lead Funnel","CRM","LEADS","Handle paid quotes and the instant-quote email flow.","Convert quote requests into tracked leads.","none","Done","Jun 23",None,None,None,0],
 "127":["Add missing leads to HubSpot + forward to Eric/sales@","CRM","LEADS","Add missing leads to HubSpot and forward submissions to Eric/sales@.","Keep the CRM and Eric in sync on inbound.","high","Done","Jun 3",None,None,None,0],
 "111":["Alec: log all outbound calls in HubSpot","CRM",None,"Ensure Alec logs all outbound calls in HubSpot, not his cell.","Unlocks the transcript pipeline for copy + enrichment.","high","Backlog",None,None,None,None,0],
