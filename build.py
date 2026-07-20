@@ -13,6 +13,7 @@ R={
 "SALES":("Sales Report",S%"1kr_mhcd_vmFq193MwqEUWq26A2nCRuupfvjmG6nUH_g",0),
 "CLAIMS":("Content Claims Review",S%"1fYvU8ttKkYnS3eCZTYySDDgz8ZCRZX5m3-8aAdG-h2c",0),
 "PREP":("Prep sheet",S%"1WRIkCtlOOe2C1LLYTjUOiUbo_TX9mL6w7_1pR2omDu8",0),
+"CPLDASH":("CPL dashboard","https://leo26850.github.io/redstone-reports/",0),
 "BRO":("Redstone brochure v4",F%"1_SipSJHFP8CW3u-m6M0HtrHJQCEOMdv6",1),
 "DIE":("die-casting.pdf",F%"1jEkgcG9vijfm3PA2_-TAO7iptrcO7V8g",1),
 "SAND":("sand-casting.pdf",F%"12-lczXZFZFAUQWSrbyhASQ1AiV4URGju",1),
@@ -65,7 +66,7 @@ I={
 "88":["Add MQL/SQL + cadence + comments columns to lead sheet","RPT","LEADS","Add MQL/SQL, call-cadence, and comments columns to the lead sheet.","Let Alec track qualification status and follow-up.","high","Done","May 26",None,None,None,0],
 "112":["Alec: backfill inbound lead sheet (2 new leads)","RPT","LEADS","Add 2 new leads with disqual reasons / qualification emails.","Keep the inbound sheet complete and actioned.","high","Done","May 26",None,None,None,0],
 "90":["Month-by-month R2B2 company-size report","RPT","SALES","Break down R2B2 company-size data month-by-month, pre/post search-off.","Test whether paid search was secretly the highest-quality channel.","medium","Backlog",None,"build report",None,None,0],
-"91":["Build CPL dashboard auto-updating from BigQuery/Attio","RPT","ROADMAP","Tie quotes, form-fills, and calls into one auto-updating CPL dashboard.","Eric sees CPL at a glance every check-in (via Attio Reports).","medium","Backlog",None,"build dashboard",None,None,0],
+"91":["Build CPL dashboard auto-updating from BigQuery/Attio","RPT","CPLDASH","Tie quotes, form-fills, and calls into one auto-updating CPL dashboard.","Eric sees CPL at a glance every check-in. Dashboard: redstone-reports.","medium","Backlog",None,None,None,None,0],
 "92":["Set CPL targets (MQL ~$500 / SQL ~$1k / CPA ~$4k)","RPT","ROADMAP","Codify Eric's CPL targets (MQL ~$500 / SQL ~$1k / CPA ~$4k).","Flag off-target channels across all reporting.","high","Backlog",None,None,None,None,0],
 "93":["Change call report format (lead numbers first)","RPT","SALES","Restructure the report so leads-across-all-channels come first.","Opens every Eric call with the metric he cares about; monthly cadence.","high","Backlog",None,None,None,None,0],
 "121":["Eric monthly report (overdue catch-up + send)","RPT","SALES","Catch up and send the overdue Eric monthly report.","Keep the client's monthly performance reporting on track.","urgent","Backlog",None,None,None,None,0],
@@ -288,7 +289,7 @@ HTML=f'''<!DOCTYPE html>
   <h3>CPL reporting dashboard — RED-91 group</h3>
   <p>A GitHub dashboard has been built for the CPL reporting &amp; dashboard group (RED-91 / 92 / 93 / 90). <b>The report covers:</b></p>
   <p>Leads by channel (Google Ads · cold email · organic · referral), volume first &nbsp;•&nbsp; Cost per lead (CPL) overall + by source &nbsp;•&nbsp; MQL count &amp; cost per MQL (target ~$500) &nbsp;•&nbsp; SQL count &amp; cost per SQL (target ~$1k) &nbsp;•&nbsp; CPA / cost per closed customer (target ~$4k) &nbsp;•&nbsp; Ad spend + management fees &nbsp;•&nbsp; Quotes, form-fills &amp; sales calls tied together (via Attio) &nbsp;•&nbsp; Funnel conversion rates (lead→MQL→SQL→close; 2:1 MQL:SQL, 25% close) &nbsp;•&nbsp; Monthly + weekly check-in cadence with off-target flags vs targets.</p>
-  <p><b>Dashboard:</b> <i>link pending confirmation</i></p>
+  <p><b>Dashboard:</b> <a href="https://leo26850.github.io/redstone-reports/">leo26850.github.io/redstone-reports</a></p>
 </div>
 
 <div class="note" style="border-left-color:#e5484d">
