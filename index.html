@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Redstone — Non-Website Work Items</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1c2029; --ink:#e7ebf2; --muted:#9aa4b6;
+    --line:#262b36; --accent:#e5484d; --accent2:#3e63dd;
+    --done:#46a758; --prog:#f59e0b; --todo:#3e63dd; --back:#6b7280; --cancel:#525863; --appr:#8e4ec6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+  h1{margin:.35em 0 .2em;font-size:28px;line-height:1.2}
+  .sub{color:var(--muted);max-width:70ch}
+  .meta{color:var(--muted);font-size:12.5px;margin-top:14px}
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:104px}
+  .stat b{display:block;font-size:22px}
+  .stat span{color:var(--muted);font-size:12px}
+  section{margin-top:30px}
+  h2{font-size:17px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+  h2 .n{color:var(--muted);font-weight:500;font-size:13px}
+  .desc{color:var(--muted);font-size:13px;margin:0 0 12px}
+  ul{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+  li{display:flex;gap:12px;align-items:center;padding:10px 14px;border-top:1px solid var(--line)}
+  li:first-child{border-top:none}
+  li:hover{background:var(--card2)}
+  .id{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent2);min-width:70px;font-size:13.5px}
+  .name{flex:1;min-width:0}
+  .flag{color:var(--accent);font-size:11px;border:1px solid var(--accent);border-radius:6px;padding:1px 6px;margin-left:8px;white-space:nowrap}
+  .badge{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
+  .b-Done{color:#8fe6a8;background:rgba(70,167,88,.13);border-color:rgba(70,167,88,.3)}
+  .b-InProgress{color:#ffd27a;background:rgba(245,158,11,.13);border-color:rgba(245,158,11,.3)}
+  .b-Todo{color:#9cb4ff;background:rgba(62,99,221,.14);border-color:rgba(62,99,221,.32)}
+  .b-Backlog{color:#b8c0cf;background:rgba(107,114,128,.16);border-color:rgba(107,114,128,.32)}
+  .b-Cancelled{color:#8b93a1;background:rgba(82,88,99,.16);border-color:rgba(82,88,99,.3);text-decoration:line-through}
+  .b-InternalApproval{color:#d6b3f0;background:rgba(142,78,198,.15);border-color:rgba(142,78,198,.34)}
+  .note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin-top:30px}
+  .note h3{margin:0 0 8px;font-size:14px}
+  .note p{margin:6px 0;color:var(--muted);font-size:13.5px}
+  code{background:#0b0d11;border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:12.5px}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Redstone Manufacturing · Plane project RED</div>
+  <h1>Non-Website Work Items</h1>
+  <p class="sub">Everything in the RED project that isn't the website build — outbound, CRM, brochures &amp; decks, reporting, email infrastructure, ads, and coordination. Website page/template/content/SEO/deploy items are excluded.</p>
+  <div class="meta">Source: Plane workspace <code>project-ares</code> · 446 total RED items · ~95 non-website · Generated 2026-07-20</div>
+  <div class="stats">
+    <div class="stat"><b>446</b><span>total RED items</span></div>
+    <div class="stat"><b>~95</b><span>non-website</span></div>
+    <div class="stat"><b>9</b><span>categories</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Cold email / outbound <span class="n">5</span></h2>
+  <p class="desc">Cold-email launch, tooling, and outbound domain strategy.</p>
+  <ul>
+    <li><span class="id">RED-82</span><span class="name">Go Live with Cold Email</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-130</span><span class="name">Share Lemlist API key (cold-email stats pipeline)</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-68</span><span class="name">Lemlist reply webhook → BigQuery + Slack pipeline</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-103</span><span class="name">Keep ≥1 outbound domain warming in reserve</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-104</span><span class="name">"Mexico→China switch on discovery" outbound sequence</span><span class="badge b-Backlog">Backlog</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Prospecting — lists, scrapers, trade shows <span class="n">17</span></h2>
+  <p class="desc">Lead-list building, exhibitor scraping, event enrollment, target trackers.</p>
+  <ul>
+    <li><span class="id">RED-133</span><span class="name">Compile June/July 2026 US industry-event list</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-134</span><span class="name">Build exhibitor scraper (Map Your Show + A2Z adapters)</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-135</span><span class="name">Scrape exhibitor directories → 2,739 companies</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-136</span><span class="name">Phase 2 — Apollo enrichment → decision-maker emails</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-137</span><span class="name">Crack SEMICON pagination + add H2 flagship shows</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-138</span><span class="name">Enroll team in priority June/July 2026 events</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-139</span><span class="name">Verify MD&amp;M East 2026 dates with Informa</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-140</span><span class="name">Finalize Labs Facility Testing list (+Meta/Google/MS)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-141</span><span class="name">Expand Aerospace &amp; Defense Apollo list to ~80</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-142</span><span class="name">Refine Ohio OEM list (machinery/equipment only)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-143</span><span class="name">Build June–July US trade-show list (exhibitors)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-124</span><span class="name">Create cold call list for Eric</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-129</span><span class="name">Lab List at tech companies</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-161</span><span class="name">Redstone USA — Target Account Tracker</span><span class="badge b-InProgress">In Progress</span></li>
+    <li><span class="id">RED-168</span><span class="name">Send Eric the qualified-leads list (CPL dispute)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-147</span><span class="name">Email Eric: consolidated outreach lists + brochures</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-113</span><span class="name">Eric/Alec: share next trade show details</span><span class="badge b-Backlog">Backlog</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>CRM / HubSpot / Attio / qualification <span class="n">12</span></h2>
+  <p class="desc">CRM builds, lead logging, call-transcript work, qualification agents.</p>
+  <ul>
+    <li><span class="id">RED-106</span><span class="name">Start Attio build (after website sent for approval)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-107</span><span class="name">Build qualification agent (rev/employee + headcount)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-108</span><span class="name">Attio AI agent finish (Redstone Attio install)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-120</span><span class="name">R7 — Attio AI agent finish</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-119</span><span class="name">Xometry Lead Funnel</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-127</span><span class="name">Add missing leads to HubSpot + forward to Eric/sales@</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-111</span><span class="name">Alec: log all outbound calls in HubSpot</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-144</span><span class="name">Match HubSpot call list to leads</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-145</span><span class="name">Research HubSpot call-transcript extraction</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-151</span><span class="name">Alec: send HubSpot call transcripts (Mexico-vs-China)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-89</span><span class="name">Investigate scraping HubSpot call recordings</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-128</span><span class="name">Connect homepage form → Slack lead notification<span class="flag">flag</span></span><span class="badge b-Done">Done</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Reporting / dashboards / lead-sheet ops <span class="n">15</span></h2>
+  <p class="desc">CPL reporting, dashboards, lead-sheet definitions and backfills, data pipelines.</p>
+  <ul>
+    <li><span class="id">RED-74</span><span class="name">BQ leads → Google Sheet daily mirror</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-86</span><span class="name">Define MQL vs SQL in writing + propagate</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-87</span><span class="name">Hard-block free-email providers from lead sheet</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-88</span><span class="name">Add MQL/SQL + cadence + comments columns to lead sheet</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-112</span><span class="name">Alec: backfill inbound lead sheet (2 new leads)</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-90</span><span class="name">Month-by-month R2B2 company-size report</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-91</span><span class="name">Build CPL dashboard auto-updating from BigQuery/Attio</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-92</span><span class="name">Set CPL targets (MQL ~$500 / SQL ~$1k / CPA ~$4k)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-93</span><span class="name">Change call report format (lead numbers first)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-121</span><span class="name">Eric monthly report (overdue catch-up + send)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-162</span><span class="name">Review PostHog pipeline failure</span><span class="badge b-InProgress">In Progress</span></li>
+    <li><span class="id">RED-55</span><span class="name">Hand-off note to Eric/Kas with monitoring dashboard link</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-48</span><span class="name">Update /dashboard.html with new live URLs<span class="flag">flag</span></span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-80</span><span class="name">Virtual referral (stale) + CPL calculations</span><span class="badge b-Cancelled">Cancelled</span></li>
+    <li><span class="id">RED-77</span><span class="name">Virtual referral (stale) + CPL calculations</span><span class="badge b-Cancelled">Cancelled</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Brochures &amp; sales decks <span class="n">24</span></h2>
+  <p class="desc">Service brochures, the general sales deck, and all Eric slide-level edits.</p>
+  <ul>
+    <li><span class="id">RED-163</span><span class="name">Service dedicated brochure</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-164</span><span class="name">Service Brochure — Die Casting</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-165</span><span class="name">Service Brochure — Sand Casting</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-166</span><span class="name">Service Brochure — Investment Casting</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-167</span><span class="name">Service Brochure — CNC Machining</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-169</span><span class="name">Service Brochure — Metal Injection Molding (MIM)</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-170</span><span class="name">Service Brochure — Sheet Metal Fabrication</span><span class="badge b-InternalApproval">Internal Approval</span></li>
+    <li><span class="id">RED-132</span><span class="name">Brochure 2 — add product photos (17-sheet canonical)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-150</span><span class="name">Kas→Eric brochure "homework" email</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-109</span><span class="name">Eric: send brochure feedback</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-115</span><span class="name">Eric: think through how brochure/deck will be used</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-101</span><span class="name">Build sales deck after brochure approved</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-102</span><span class="name">Customized-brochure flow for trade-show top 10</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-152</span><span class="name">Automate brochure delivery on lead-form submission</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-56</span><span class="name">Copy items — Redstone items to use for copy</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-57</span><span class="name">General Deck — design conventions + WIP completion</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-58</span><span class="name">General Deck — design inconsistency audit</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-59</span><span class="name">General Deck — second copy review pass</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-61</span><span class="name">General Deck — Round 3 revisions from Leo</span><span class="badge b-InProgress">In Progress</span></li>
+    <li><span class="id">RED-62</span><span class="name">Eric: deck Quote SLA 14→5 business days</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-63</span><span class="name">Eric: sand casting max weight 7,000kg→300kg</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-64</span><span class="name">Eric: deck remove Ohio address, use Seattle only</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-65</span><span class="name">Eric: deck logo bar — drop Mahindra/Honda/Mayer</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-66</span><span class="name">Eric: deck Post-Processing slide tagline removal</span><span class="badge b-Backlog">Backlog</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Email infrastructure / lead automation <span class="n">5</span></h2>
+  <p class="desc">SMTP/Mailgun migration for the sales mailbox and lead auto-reply.</p>
+  <ul>
+    <li><span class="id">RED-347</span><span class="name">Set up Mailgun SMTP on the Redstone sales email</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-348</span><span class="name">Send SMTP switch details to Leo via Slack</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-349</span><span class="name">Re-test notification deliverability after Mailgun</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-350</span><span class="name">Inform Eric of SMTP migration + justification</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-429</span><span class="name">Lead-form auto-reply automation (enterprise leads)<span class="flag">flag</span></span><span class="badge b-InternalApproval">Internal Approval</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Ads / local listings <span class="n">3</span></h2>
+  <p class="desc">Google Ads strategy, Google Business Profile, ad landing-page tweaks.</p>
+  <ul>
+    <li><span class="id">RED-69</span><span class="name">Pivot Google Ads to Mexico-only search campaigns</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-171</span><span class="name">Fix Redstone Seattle Google Business Profile / listings</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-98</span><span class="name">Disable exit-intent pop-up across ad landing pages<span class="flag">flag</span></span><span class="badge b-Backlog">Backlog</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Meetings / coordination / call prep <span class="n">9</span></h2>
+  <p class="desc">Client and internal meetings, review sessions, call preparation.</p>
+  <ul>
+    <li><span class="id">RED-158</span><span class="name">Kas: book Rachel + full-team meeting (calendar invites)</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-122</span><span class="name">Jack/Rachel Friday lunch coord + Ash notes send</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-79</span><span class="name">Eric call prep</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-76</span><span class="name">Eric call prep (from Jack's emailed docs)</span><span class="badge b-Cancelled">Cancelled</span></li>
+    <li><span class="id">RED-78</span><span class="name">Eric: recurring Tuesday meeting setup</span><span class="badge b-Cancelled">Cancelled</span></li>
+    <li><span class="id">RED-81</span><span class="name">Eric recurring Tuesday meeting setup</span><span class="badge b-Cancelled">Cancelled</span></li>
+    <li><span class="id">RED-15</span><span class="name">Eric review session Sun May 10 — capture sign-off</span><span class="badge b-Done">Done</span></li>
+    <li><span class="id">RED-27</span><span class="name">Internal review pass — Leo + Daniel sign off</span><span class="badge b-Cancelled">Cancelled</span></li>
+    <li><span class="id">RED-37</span><span class="name">Mid-phase Eric review session (target May 20)</span><span class="badge b-Cancelled">Cancelled</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Misc ops / tooling / planning <span class="n">6</span></h2>
+  <p class="desc">Internal tooling guides, context prompts, and non-website planning.</p>
+  <ul>
+    <li><span class="id">RED-153</span><span class="name">Guide: Gemini + NanoBanana API setup for image gen</span><span class="badge b-Todo">Todo</span></li>
+    <li><span class="id">RED-99</span><span class="name">Send Eric a Claude context-gathering prompt</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-100</span><span class="name">Onboarding rule: capture client pitch language day 1</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-110</span><span class="name">Eric: run local Claude on Kas's prompt → .md context</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-105</span><span class="name">Plan Aerospace site build + outbound campaigns (US)</span><span class="badge b-Backlog">Backlog</span></li>
+    <li><span class="id">RED-131</span><span class="name">Redstone copy review<span class="flag">flag</span></span><span class="badge b-Backlog">Backlog</span></li>
+  </ul>
+</section>
+
+<div class="note">
+  <h3>Classification notes &amp; judgment calls</h3>
+  <p><b>Rule used:</b> "Website" = building/editing site pages, templates, content, imagery, on-page SEO, technical/deploy/redirect work, on-site tracking embeds, and forms wired into the site. Everything else is here.</p>
+  <p><span class="flag">flag</span> items touch the site but are really ops, so they were placed on the non-website side: <b>RED-128</b> (form→Slack plumbing), <b>RED-48</b> (internal <code>dashboard.html</code>), <b>RED-98</b> (ad landing-page popup), <b>RED-429</b> (auto-reply — lives in the site repo but is lead automation), <b>RED-131</b> (copy review — could be site or deck).</p>
+  <p>Kept as <b>website</b> (excluded here): RED-430 (HubSpot form setup), RED-159 (wire quote form), RED-148 (brochure CTA → form link) — all site form plumbing.</p>
+</div>
+
+<footer>
+  Redstone Manufacturing · Plane project RED · non-website slice · 2026-07-20 · internal, unlisted
+</footer>
+</div>
+</body>
+</html>
